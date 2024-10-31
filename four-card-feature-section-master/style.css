@@ -1,0 +1,67 @@
+/* General styles */
+body {
+font-size: 15px;
+}
+
+h2, p {
+    font-family: 'Poppins';
+}
+
+p {
+    font-weight: 400;
+}
+
+
+/* Div styles */
+.reliable {
+    text-align: center;
+    
+    
+}
+
+/* Media Query */
+
+@media screen and (max-width: 450px) {
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .reliable {
+        border: 1px solid red;
+        max-width: 19rem;
+    }
+
+    .reliable h2, .reliable p  {
+        
+        
+        
+    }
+
+    .supervisor {
+       border-top: solid .25rem hsl(180, 62%, 55%);
+       border-radius: .5rem;
+        max-width: 19rem;
+    }
+
+    .team-builder {
+        border-top: solid .25rem hsl(0, 78%, 62%);
+       border-radius: .5rem;
+        max-width: 19rem;
+    }
+
+    .karma {
+        border-top: solid .25rem hsl(34, 97%, 64%);
+        border-radius: .5rem;
+        max-width: 19rem;
+    }
+
+    .calculator {
+        border-top: solid .25rem hsl(212, 86%, 64%);
+        border-radius: .5rem;
+        max-width: 19rem;
+    }
+}
