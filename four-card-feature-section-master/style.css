@@ -1,6 +1,7 @@
 /* General styles */
 body {
     font-size: 15px;
+    min-height: 100vh;
 }
 
 h2, p {
@@ -13,13 +14,15 @@ p {
 
 .supervisor, .team-builder, .karma, .calculator {
     box-shadow: 2.6px 5.3px 5.3px hsl(0deg 0% 0% / 0.42);
-    border-radius: .5rem; /* Moved to a shared selector */
-    max-width: 19rem; /* Moved to a shared selector */
-    margin: auto; /* Moved to a shared selector */
+    border-radius: .5rem; 
+    max-width: 19rem;
+    margin: auto; 
+    max-height: 15rem;
 }
 
 .supervisor {
     border-top: solid 0.25rem hsl(180, 62%, 55%);
+    ;
 }
 
 .team-builder {
@@ -33,6 +36,13 @@ p {
 .calculator {
     border-top: solid 0.25rem hsl(212, 86%, 64%);
 }
+
+
+
+
+
+
+
 
 /* Media Query */
 @media screen and (max-width: 450px) {
@@ -70,11 +80,12 @@ p {
         grid-template-rows: auto;
         gap: 0.4rem;
         align-items: center;
+        min-width: 15rem;
+        max-width: 100%;
     }
 
     .container div {
-        width: 100%; /* Responsive width */
-        max-height: 15rem;
+       
         padding: .25rem;
     }
 
@@ -92,6 +103,9 @@ p {
         grid-row: 1 / span 2;
         grid-column: 1;
         justify-self: center;
+        max-width: 19rem;
+        margin: auto; 
+        max-height: 15rem;
     }
 
     .team-builder {
@@ -99,6 +113,9 @@ p {
         grid-row: 1;
         grid-column: 2;
         align-self: center;
+        max-width: 19rem;
+        margin: auto; 
+        max-height: 15rem;
     }
 
     .karma {
@@ -106,6 +123,9 @@ p {
         grid-row: 2;
         grid-column: 2;
         align-self: center;
+        max-width: 19rem;
+        margin: auto; 
+        max-height: 15rem;
     }
 
     .calculator {
@@ -113,6 +133,9 @@ p {
         grid-row: 1 / span 2;
         grid-column: 3;
         justify-self: center;
+        max-width: 19rem;
+        margin: auto; 
+        max-height: 15rem;
     }
 }
 
@@ -123,14 +146,9 @@ p {
         grid-template-rows: auto;
         gap: 0.4rem;
         align-items: center;
-        
-            
     }
 
-    .container div {
-        width: 100%;
-        
-    }
+    
 
     .container img {
         display: block;
@@ -141,6 +159,7 @@ p {
 
     .reliable {
         text-align: center;
+        
     }
 
     .supervisor {
@@ -148,6 +167,9 @@ p {
         grid-row: 1 / span 2;
         grid-column: 1;
         justify-self: center;
+        max-width: 19rem;
+        margin: auto; 
+        max-height: 15rem;
     }
 
     .team-builder {
@@ -155,6 +177,9 @@ p {
         grid-row: 1;
         grid-column: 2;
         align-self: center;
+         max-width: 19rem;
+        margin: auto; 
+        max-height: 15rem;
     }
 
     .karma {
@@ -162,6 +187,9 @@ p {
         grid-row: 2;
         grid-column: 2;
         align-self: center;
+        max-width: 19rem;
+        margin: auto; 
+        max-height: 15rem;
     }
 
     .calculator {
@@ -169,6 +197,9 @@ p {
         grid-row: 1 / span 2;
         grid-column: 3;
         justify-self: center;
+        max-width: 19rem;
+        margin: auto; 
+        max-height: 15rem;
     }
 }
 
