@@ -1,43 +1,162 @@
 /* General styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --light-gray: hsl(0, 0%, 98%);
+  --white: rgb(255, 255, 255);
+  --dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --cyan: hsl(180, 62%, 55%);
+  --red: hsl(0, 78%, 62%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --box-shadow: 0px 12px 14px -10px hsla(212, 86%, 64%, 0.301);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-size: 15px;
-    min-height: 100vh;
+  background-color: var(--light-gray);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
 }
 
-h2, p {
-    font-family: 'Poppins';
+/** Feature Header**/
+header {
+    text-align: center;
+    color: var(--dark-blue);
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5.3rem;
+    line-height: 3rem;
+    justify-content: center;
 }
 
-p {
-    font-weight: 400;
+h1 {
+    font-weight: 600;
+    font-size: 2.3rem;
 }
 
-.supervisor, .team-builder, .karma, .calculator {
-    box-shadow: 2.6px 5.3px 5.3px hsl(0deg 0% 0% / 0.42);
-    border-radius: .5rem; 
-    max-width: 19rem;
-    margin: auto; 
-    max-height: 15rem;
+header span {
+    font-weight: 200;
 }
 
-.supervisor {
-    border-top: solid 0.25rem hsl(180, 62%, 55%);
-    ;
+header p {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1.3rem;
+    width: 40%;
+    color: var(--grayish-blue);
+    line-height: 1.5rem;
 }
 
-.team-builder {
-    border-top: solid 0.25rem hsl(0, 78%, 62%);
+/** Feature Cards **/
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    max-width: 70rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 4rem;
 }
 
-.karma {
-    border-top: solid 0.25rem hsl(34, 97%, 64%);
+.card-one,
+.card-two,
+.card-three,
+.card-four {
+    position: relative;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
 }
 
-.calculator {
-    border-top: solid 0.25rem hsl(212, 86%, 64%);
+.card-info {
+    padding: 1.7rem 2.3rem;
 }
 
+.card-info h2 {
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+}
 
+.card-info p {
+    color: var(--grayish-blue);
+    font-size: 14px;
+    line-height: 1.5rem;
+    padding-top: 9px;
+}
+
+/** Icon images **/
+
+.icon {
+    position: static;
+    height: 4rem;
+    margin-left: 75%;
+    margin-top: 2%;
+    width: 4rem;
+}
+
+.card-one,
+.card-two,
+.card-three,
+.card-four {
+    border-top-style: solid;
+    border-top-width: 5px;
+    max-width: 350px;
+    width: 100%;
+    min-height: 15rem;
+    height: 30%;
+}
+
+.card-one {
+    border-color: var(--cyan);
+}
+
+.card-two {
+    border-color: var(--red);
+}
+
+.card-three {
+    border-color: var(--orange);
+}
+
+.card-four {
+    border-color: var(--blue);
+}
+
+.card-one,
+.card-four,
+.grid-center-container {
+    place-self: center;
+}
+
+.grid-center-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/** Media Queries **/
+
+@media only screen and (max-width: 769px) {
+    .feature-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+  }
 
 
 
@@ -45,7 +164,7 @@ p {
 
 
 /* Media Query */
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
     .container {
         display: flex;
         flex-direction: column;
@@ -62,8 +181,8 @@ p {
     .container img {
         display: block;
         margin-left: auto;
-        max-width: 100%; /* Responsive images */
-        height: auto; /* Maintain aspect ratio */
+        max-width: 100%; 
+        height: auto; 
     }
 
     .reliable {
@@ -71,21 +190,20 @@ p {
     }
 
 
-}
+} */
 
-@media screen and (min-width: 451px) and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
         grid-template-rows: auto;
-        gap: 0.4rem;
+        gap: 1rem;
         align-items: center;
         min-width: 15rem;
         max-width: 100%;
     }
 
     .container div {
-       
         padding: .25rem;
     }
 
@@ -146,6 +264,8 @@ p {
         grid-template-rows: auto;
         gap: 0.4rem;
         align-items: center;
+        max-width: 80%;
+        margin: 0 auto;
     }
 
     
@@ -201,7 +321,7 @@ p {
         margin: auto; 
         max-height: 15rem;
     }
-}
+} */
 
 
 
